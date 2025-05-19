@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Аренда & Кейтеринг | ПИТЕР LIFE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+ 
+    <header id="t-main-content">
+        <div class="navbar">
+            <!-- div class="logo">
+                <a href="/"><img src="assets/logo-white.png" alt="Питер Life"></a>
+            </div -->
+            <nav class="main-menu">
+                <ul>
+                    <!-- Остальные пункты меню здесь 
+                    <li><a href="afisha.html">Афиша</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="menu.html">Меню</a></li>
+                    <li><a href="#bar-section" class="active">Наш бар</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>-->
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="rent.html">Праздники</a></li>
+                    <li class="phone"><a href="tel:+79187589991">+7 (918) 758-99-91</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+<section class="hero">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="assets/hero-party.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>АРЕНДУЙ. ТУСИ. ЗАПОМНИ.</h1>
+      <h2>ПИТЕР LIFE ДЕЛАЕТ ВЕЧЕР</h2>
+      <p class="bold">Закроем бар под тебя. Накормим гостей. И сделаем это красиво.</p>
+      <a href="#tablereservation" class="reserve-btn">ЗАБРОНИРОВАТЬ МЕРОПРИЯТИЕ</a>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-container">
+    <div class="about-content">
+      <h2>ТВОЙ ПРАЗДНИК — НАШ СЦЕНАРИЙ</h2>
+      <p>Представь: весь бар в твоём распоряжении. Никаких случайных людей. Только ты, твои гости и атмосфера, которую мы создаём под тебя.</p>
+      <p>День рождения, корпоратив, свадьба, pre-party, after-party или просто захотелось — мы организуем всё.</p>
+      <p class="bold">Авторская кухня. DJ. Свет. Кальян. Кейтеринг. И даже фаер-шоу — если захочешь.</p>
+    </div>
+  </div>
+</section>
+
+<section class="specials">
+  <div class="specials-container">
+    <div class="specials-header">
+      <h2>ФОРМАТЫ МЕРОПРИЯТИЙ</h2>
+      <p>Ты выбираешь — мы делаем. Без лишних слов.</p>
+    </div>
+    <div class="special-cards">
+      <div class="special-card">
+        <div class="special-content">
+          <h3>ЗАКРЫТЫЙ БАР</h3>
+          <p>От 10 до 150 гостей. Бар целиком под тебя. Музыка, еда, бармены — всё работает только на твою тусу.</p>
+          <a href="#tablereservation" class="special-btn">Забронировать</a>
+        </div>
+      </div>
+      <div class="special-card">
+        <div class="special-content">
+          <h3>АРЕНДА ПЛОЩАДКИ</h3>
+          <p>У нас есть бары и партнёрские пространства под любой формат — от бизнес-ивента до концертного шоу.</p>
+          <a href="#tablereservation" class="special-btn">Узнать больше</a>
+        </div>
+      </div>
+      <div class="special-card">
+        <div class="special-content">
+          <h3>КЕЙТЕРИНГ</h3>
+          <p>Мы приедем к тебе. Еда, бар, кальяны, персонал, оформление — как у нас, но у тебя. Локация — любая.</p>
+          <a href="#tablereservation" class="special-btn">Заказать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-container">
+    <div class="about-content">
+      <h2>ПОЧЕМУ ПИТЕР LIFE?</h2>
+      <p>📍 Локация в центре — не надо ехать в тайгу</p>
+      <p>🍸 50+ авторских коктейлей и меню от шефа</p>
+      <p>🎧 DJ, свет, дым — всё включено</p>
+      <p>🔥 В каждом баре — уникальный вайб и интерьер</p>
+      <p>🛠️ Full-service: от планирования до уборки после</p>
+      <p class="bold">Мы не просто сдаём помещение. Мы создаём эмоции.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tablereservation" class="reservation">
+  <div class="reservation-container">
+    <h2>ЗАБРОНИРОВАТЬ МЕРОПРИЯТИЕ</h2>
+    <form class="reservation-form">
+      <div class="form-group">
+        <input type="hidden" name="bar" value="event">
+        <input type="text" name="bar-name" value="Аренда / Кейтеринг" readonly class="readonly-input">
+      </div>
+      <div class="form-group">
+        <label for="phone">Телефон</label>
+        <div class="phone-input">
+          <span class="phone-prefix">+7</span>
+          <input type="tel" id="phone" name="phone" placeholder="(___) ___ __ __" required>
+        </div>
+      </div>
+      <button type="submit" class="reserve-btn">Забронировать</button>
+      <p class="privacy-notice">Нажимая кнопку «Забронировать», вы даёте согласие на обработку персональных данных.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/logo-white.png" alt="Питер LIFE">
+    </div>
+    <div class="footer-social">
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+    <div class="footer-contact">
+      <p>Телефон: <a href="tel:+74956498191">+7 (495) 649-81-91</a></p>
+      <p>Email: <a href="mailto:info@stereopeoplegroup.ru">info@stereopeoplegroup.ru</a></p>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 ПИТЕР LIFE. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
