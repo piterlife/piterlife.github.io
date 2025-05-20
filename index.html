@@ -10,18 +10,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 80%;
+        }
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal-controls {
+            margin-top: 10px;
+        }
+        .modal-controls button {
+            background: #fff;
+            border: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header id="t-main-content">
         <div class="navbar">
-            <!-- div class="logo">
-                <a href="/"><img src="assets/logo-white.png" alt="Питер Life"></a>
-            </div -->
             <nav class="main-menu">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="#events">Афиша</a></li>
-                    <li><a href="#menu">Меню</a></li>
+                    <li><a href="#menu" id="menuPreviewBtn">Меню</a></li>
                     <li><a href="rent.html">Праздники</a></li>
                     <li class="phone"><a href="tel:+79187589991">+7 (918) 758-99-91</a></li>
                 </ul>
@@ -33,7 +76,6 @@
             </div>
         </div>
     </header>
-
     
 <section class="hero">
     <video autoplay muted loop playsinline class="background-video">
@@ -355,3 +397,49 @@
             </div>
         </div>
 </footer>
+<div id="menuPreviewModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="assets/int.jpg" alt="Фото меню">
+            <div class="modal-controls">
+                <button id="prevBtn">&#10094;</button>
+                <button id="nextBtn">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("menuPreviewModal");
+        const modalImg = document.getElementById("modalImage");
+        const closeBtn = document.querySelector(".close");
+        const images = ["assets/int.jpg", "assets/wall.jpg"];
+        let currentIndex = 0;
+
+        const showImage = (index) => {
+            modalImg.src = images[index];
+        };
+
+        document.getElementById("menuPreviewBtn").addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            showImage(currentIndex);
+        });
+
+        document.getElementById("prevBtn").onclick = () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        };
+
+        document.getElementById("nextBtn").onclick = () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        };
+
+        closeBtn.onclick = () => modal.style.display = "none";
+
+        window.onclick = (e) => {
+            if (e.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
