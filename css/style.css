@@ -1157,3 +1157,10 @@ footer {
     margin: 15px auto 0;
     text-align: center;
 }
+.nav-menu {
+    display: none;
+}
+
+.nav-menu.active {
+    display: block;
+}
