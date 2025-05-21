@@ -174,3 +174,12 @@ setInterval(() => {
     const index = Math.floor(Math.random() * items.length);
     items.forEach((el, i) => el.classList.toggle('active', i === index));
 }, 3000);
+const mobileToggle = document.querySelector('.mobile-menu-toggle');
+const mainMenuEl = document.querySelector('.main-menu');
+
+if (mobileToggle && mainMenuEl) {
+    mobileToggle.addEventListener('click', () => {
+        mainMenuEl.classList.toggle('active');
+        mobileToggle.classList.toggle('open');
+    });
+}
