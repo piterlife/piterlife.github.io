@@ -344,3 +344,12 @@
         background-repeat: repeat-x;
     }
 }
+@media (max-width: 575.98px) {
+    .hero-text h1 {
+        font-size: clamp(1rem, 7vw, 1.3rem);
+        word-break: break-word;
+        line-height: 1.1;
+        padding: 0 5px; /* чуть-чуть отступы, чтоб не прилипало */
+        text-align: center; /* вдруг не стоит */
+    }
+}
